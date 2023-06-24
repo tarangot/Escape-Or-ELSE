@@ -1,3 +1,10 @@
+"""
+Escape or ELSE
+
+Author: Thomas Tarango
+Date: 6/24/2024
+"""
+
 import random
 from time import sleep
 
