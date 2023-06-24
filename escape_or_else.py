@@ -178,7 +178,7 @@ def attempt_escape(player_inventory):
             sleep(1)
             continue
 
-        bonus = len(player_inventory)
+        bonus = len(player_inventory) / 4
         player_roll = roll_dice(player_inventory) + bonus
         mother_roll = random.randint(1, 20)
 
@@ -310,10 +310,10 @@ rooms = {
     "Garage": {"east": "Laundry Room", "items": ["tools", "bike"]},
     "Laundry Room": {"south": "Kitchen", "west": "Garage", "items": ["clean clothes"]},
     "Living Room": {"east": "Kitchen", "items": ["scattered toys"]},
-    "Kitchen": {"north": "Laundry Room", "east": "Living Room", "west": "Child's Bedroom", "items": ["dirty dishes"]},
+    "Kitchen": {"north": "Laundry Room", "east": "Living Room", "west": "Child's Bedroom", "south": "Mother's Bedroom", "items": ["dirty dishes"]},
     "Child's Bedroom": {"north": "Child's Study Room", "east": "Kitchen", "items": ["books", "dirty clothes"]},
     "Child's Study Room": {"south": "Child's Bedroom", "items": ["pens", "papers", "trash"]},
-    "Mother's Bedroom": {"north": "Kitchen", "items": ["Mother's precious necklace"]},
+    "Mother's Bedroom": {"north": "Kitchen", "east": "Mother's Bathroom", "items": ["Mother's precious necklace"]},
     "Mother's Bathroom": {"west": "Mother's Bedroom", "items": ["Mother's favorite perfume"]}
 }
 
